@@ -15,6 +15,7 @@ class CustomAdapter : RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
     private val dif = AsyncListDiffer(this, ITEM_DIFF)
 
     companion object{
+        //obnavit qilish uchun
         private val ITEM_DIFF=object : DiffUtil.ItemCallback<Contact>(){
             override fun areItemsTheSame(oldItem: Contact, newItem: Contact): Boolean {
                 return oldItem.name == newItem.name && oldItem.phone==newItem.phone
